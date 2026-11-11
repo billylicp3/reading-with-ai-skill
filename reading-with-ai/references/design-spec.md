@@ -10,9 +10,23 @@ The guide supports browsing before opening the PDF, returning for explanations w
 
 Use clear stage anchors rather than extra competing main tabs. Keep factual, explanatory and navigational content visible as appropriate; hide only supporting detail.
 
+## Source locations and quotations
+
+Before drafting the HTML, keep a compact working source map for claims, quotations and table/figure references you intend to use: source wording or a precise passage cue; physical file page; printed page if present; and whether the statement is the paper's own claim, its quotation of another author, or your explanation. This is authoring context, not a reader note-taking feature or an extra required deliverable.
+
+Count physical file pages from 1, including covers and unnumbered front matter. State that convention once in the guide; use explicit labels such as `PDF file p. 23` and `journal p. 18` (or equivalent wording in the requested language). Do not use bare `p. 23` where two systems coexist. Check actual page labels before asserting an offset: covers, missing labels and appendices can break a single-offset mapping. When useful, cite a section or table alongside the page.
+
+Use this source map while drafting, then check the finished guide's key claims, direct quotations and source locations against the accessed paper. Preserve quotation wording and mark editorial changes with brackets or omissions appropriately; otherwise use a clearly identified paraphrase. Check whether a claim spans pages rather than citing only its first nearby page. Identify secondary quotations as quoted/cited in the accessed paper, and do not imply that the earlier source was independently retrieved. If the location or wording cannot be verified, qualify or omit it rather than guessing.
+
 ## Before reading
 
 State text type, purpose, a useful entry question and the limits of the evidence. Explain 1–3 essential abbreviations before their first substantive use, if genuinely needed. Build an SVG map that conveys argument relationships, not boxes containing paragraphs. Label it as a reader-created scaffold unless reproducing an authorised original figure. Do not invent causation, sequence or consensus. Include source locations, an SVG title/description and equivalent readable text. On narrow screens reflow into a vertical equivalent rather than shrinking labels. Both versions must retain the same relationships, page references and conclusion.
+
+### SVG label layout
+
+Use nodes for concise concepts and label arrows with the relationship where needed. Put longer explanations in adjacent prose or the readable equivalent, retaining the same argument and source mapping in both versions. Native SVG text does not wrap automatically: use explicit `tspan` lines with deliberate line spacing. Choose line breaks from the rendered label width in the intended font, not a fixed character count. Allow internal padding and room for the last line; expand the node, spacing and viewBox together when needed instead of shrinking type or cutting off qualifications.
+
+Check each label against its own node or band as well as the full SVG bounds, including short source notes and the final conclusion. A page with no horizontal scrolling can still contain clipped SVG text. Retain readable label sizes, and use the vertical equivalent on narrow screens. Do not hide overflow or expose it outside the diagram as a substitute for fitting text properly.
 
 ## During reading
 
@@ -32,7 +46,7 @@ Follow-up prompts are visible and independently copyable. Each contains enough p
 
 Prefer warm cream (#f5f3ee or similar), white content surfaces, dark readable text and deep green (#195c56 or similar) accents. Use restrained green/amber notes, fine borders, readable body text around 17–18px and generous line spacing; serif headings and system sans-serif body are a useful default. No decorative dashboard metrics, thick card walls or full-application chrome. Adjust density for actual content rather than adding empty space or shrinking text.
 
-Provide A− / reset / A+ controls with a visible percentage. Resizing must affect paragraph, table and diagram-equivalent text. Keep focus rings, semantic headings, labels and adequate contrast; do not rely only on hover or colour. Native details/summary and buttons should work by keyboard. Test the whole SVG, not only page overflow. Print must expose necessary explanations and remove controls; do not print the answers as though the reader submitted them.
+Provide A− / reset / A+ controls with a visible percentage. Resizing must affect paragraph, table and diagram-equivalent text. Keep focus rings, semantic headings, labels and adequate contrast; do not rely only on hover or colour. Native details/summary and buttons should work by keyboard. Test the whole SVG, not only page overflow. Print must expose necessary explanations and remove controls; hide all quiz feedback regardless of whether a reader has submitted an answer, and render neutral option markers so checked radio state is not carried into the printout. Preserve and restore each disclosure’s original open/closed state around printing. The starter includes print expansion and state restoration; retain these when adapting it. CSS that merely displays the children of a closed details element is insufficient in some browsers. Keep printable explanatory disclosures distinct from quiz feedback.
 
 Generated files must work offline with inline styles and script. No external libraries/fonts, network calls, analytics, cookies, localStorage, reader input persistence, login, embedded chatbot or automatic upload. No notebook, progress checkboxes or submission workflow. A copyable prompt is not sent automatically.
 

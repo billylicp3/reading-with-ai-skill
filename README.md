@@ -35,4 +35,10 @@ Tell your agent what to change, try the resulting guide on a real paper, then as
 
 The skill retains concise references to public HKU guidance on learning goals, instructor rules and acknowledging AI assistance. It is an independent template, not an HKU-approved product or a universal institutional reading requirement. Source PDFs and private course materials are not distributed here. Source-paper rights remain with their respective holders.
 
-Version: 1.0.0. Instruction/schema and starter-interaction checks are recorded locally by the maintainer. A fresh end-to-end paper generation and cross-tool installation still require testing.
+## Version 1.0.1 — 11 November 2026
+
+- HTML starter: expand explanatory disclosures for printing and restore their prior states afterwards; suppress quiz feedback and selected-answer state in print; improve long-identifier wrapping and note font weight.
+- Source grounding: establish a compact claim/source map before drafting, distinguish physical file order (including covers) from printed pages, and verify quotations and secondary citations.
+- SVG layout: use concise labels, explicit line breaks and text-sized nodes; check labels against their own containers as well as the whole diagram.
+
+Validation: the starter passed checks at 360, 390 and 1440px widths, including enlarged text, plus quiz feedback, disclosure-state restoration and print checks. Extracted print-PDF text confirmed that closed explanations were included and quiz feedback was excluded. These checks used a synthetic fixture; generation speed, fresh paper analysis and cross-tool installation have not been retested.
